@@ -9,6 +9,7 @@
     "test": "jest --verbose --coverage",
     "test-watch": "jest --watchAll --verbose --coverage",
     "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
+
   },
   "jest": {
     "testEnvironment": "node"
@@ -34,5 +35,6 @@
     "eslint": "^5.16.0",
     "jsonwebtoken": "^8.4.0",
     "lint": "^1.1.2"
+
   }
 }

@@ -6,14 +6,12 @@
 ### Author: Student/Group Name
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [PR](http://xyz.com)
+[![Build Status](https://travis-ci.com/shiratap/Auth-API-server.svg?branch=master)](https://travis-ci.com/shiratap/Auth-API-server)
+* [back-end](https://arcane-scrubland-65783.herokuapp.com/) (when applicable)
 
 #### Documentation
-* [swagger](http://xyz.com) (API assignments only)
-* [jsdoc](http://xyz.com) (All assignments)
+* [jsdoc](https://arcane-scrubland-65783.herokuapp.com/docs) (All assignments)
 
 ### Modules
 #### `modulename.js`
@@ -41,6 +39,3 @@ Usage Notes or examples
 * How do you run tests?
 * What assertions were made?
 * What assertions need to be / should be made?
-
-#### UML
-Link to an image of the UML for your application and response to events

@@ -4,9 +4,9 @@ process.env.SECRET = 'test';
 
 const jwt = require('jsonwebtoken');
 
-const Roles = require('../../../src/auth/roles-model.js');
+const Roles = require('../../../src/models/users/roles-model.js');
 const server = require('../../../src/app.js').server;
-const supergoose = require('../../supergoose.js');
+const supergoose = require('../supergoose.js');
 
 const mockRequest = supergoose.server(server);
 
@@ -18,7 +18,7 @@ let users = {
 
 beforeAll(async (done) => {
   await supergoose.startDB();
-  done()
+  done();
 });
 
 
@@ -41,7 +41,7 @@ describe('Auth Router', () => {
             id = token.id;
             encodedToken = results.text;
             expect(token.id).toBeDefined();
-            expect(token.capabilities).toBeDefined();
+            expect(token).toBeDefined();
           });
       });
 
@@ -51,7 +51,7 @@ describe('Auth Router', () => {
           .then(results => {
             var token = jwt.verify(results.text, process.env.SECRET);
             expect(token.id).toEqual(id);
-            expect(token.capabilities).toBeDefined();
+            expect(token).toBeDefined();
           });
       });
 
@@ -61,7 +61,7 @@ describe('Auth Router', () => {
           .then(results => {
             var token = jwt.verify(results.text, process.env.SECRET);
             expect(token.id).toEqual(id);
-            expect(token.capabilities).toBeDefined();
+            expect(token).toBeDefined();
           });
       });
 
